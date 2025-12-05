@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admisión - Facultad de Ciencias Sociales</title>
+  <meta name="description" content="Formulario de contacto y admisión al nuevo programa académico.">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="blue-grey lighten-5">
+
+  <header>
+    <nav class="nav-wrapper blue darken-3" aria-label="Menú principal">
+      <div class="container">
+        <a href="index.html" class="brand-logo">Fac. Ciencias Sociales</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i><span class="sr-only">Abrir menú</span></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="programa.html">Programa</a></li>
+          <li><a href="admision.html">Admisión</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-nav" aria-hidden="true">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="programa.html">Programa</a></li>
+      <li><a href="admision.html">Admisión</a></li>
+    </ul>
+  </header>
+
+  <main class="container section" aria-labelledby="form-title">
+    <h4 id="form-title">Formulario de admisión</h4>
+    <p>Complete el formulario y le responderemos por correo. Campos obligatorios marcados con <strong>*</strong>.</p>
+
+    <form id="admissionForm" novalidate aria-describedby="form-note">
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <input id="nombre" name="nombre" type="text" required aria-required="true">
+          <label for="nombre">Nombre completo *</label>
+          <span class="helper-text" data-error="Nombre requerido"></span>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="email" name="email" type="email" required aria-required="true" aria-describedby="email-help">
+          <label for="email">Correo electrónico *</label>
+          <span class="helper-text" id="email-help" data-error="Correo inválido">Usa tu correo institucional si es posible.</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <select id="modalidad" name="modalidad" required aria-required="true">
+            <option value="" disabled selected>Elige la modalidad</option>
+            <option value="presencial">Presencial</option>
+            <option value="semipresencial">Semipresencial</option>
+          </select>
+          <label for="modalidad">Modalidad *</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input id="telefono" name="telefono" type="tel" pattern="[0-9+\- ]{7,15}">
+          <label for="telefono">Teléfono (opcional)</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="mensaje" name="mensaje" class="materialize-textarea" required aria-required="true"></textarea>
+          <label for="mensaje">Mensaje / Comentarios *</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <button class="btn blue darken-3" type="submit" aria-label="Enviar formulario">Enviar</button>
+          <button class="btn grey lighten-1" type="reset" aria-label="Restablecer formulario">Restablecer</button>
+        </div>
+      </div>
+
+      <div id="form-note" class="sr-only" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <footer class="page-footer blue darken-3">
+    <div class="container">© 2025 Facultad de Ciencias Sociales</div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

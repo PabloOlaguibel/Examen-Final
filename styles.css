@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Fondo muy claro */
+    color: #343a40; /* Color de texto base oscuro */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #002c6b; /* Azul Oscuro para títulos */
+}
+
+.text-secondary {
+    color: #343a40 !important; /* Usamos este para subtítulos de sección */
+}
+
+/* 2. ESTILOS DE NAVEGACIÓN (HEADER/NAVBAR) */
+
+.navbar {
+    background-color: #0033a0 !important; /* Azul Primario Fuerte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle elevación */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white !important;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #ffc107 !important; /* Amarillo para interacción (hover) */
+}
+
+/* Para corregir el posible descuadre debajo de un navbar fijo */
+.hero-section {
+    padding-top: 2rem; /* Espacio superior para separar del navbar */
+}
+
+
+/* 3. ESTILOS DE COMPONENTES DE BOOTSTRAP */
+
+/* Botones Primarios (CONOCER EL PROGRAMA) */
+.btn-primary {
+    background-color: #0033a0;
+    border-color: #0033a0;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #002c6b;
+    border-color: #002c6b;
+    transform: translateY(-1px);
+}
+
+/* Botón de Llamada a la Acción (SOLICITAR INFORMACIÓN) */
+.btn-success {
+    background-color: #28a745; /* Verde estándar para llamar a la acción */
+    border-color: #28a745;
+}
+
+/* Estilo para las Tarjetas de Beneficios */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra suave para profundidad */
+    transition: box-shadow 0.3s, transform 0.3s;
+    height: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.card-title {
+    color: #0033a0; /* Título de la tarjeta en el color principal */
+    font-size: 1.25rem;
+    font-weight: 700;
+}
